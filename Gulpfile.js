@@ -8,6 +8,10 @@ var gulp = require('gulp'),
     webserver = require('gulp-webserver'),
     plumber = require('gulp-plumber');
 
+
+/***********
+*** SASS ***
+************/
 gulp.task('sass', function () {
     console.log('COMPILING SASS');
     return gulp.src('./src/**/*.scss')
@@ -27,6 +31,9 @@ gulp.task('sass', function () {
 });
 
 
+/****************
+*** WEBSERVER ***
+*****************/
 gulp.task('webserver', function () {
     return gulp.src('./')
         .pipe(webserver({
@@ -38,8 +45,15 @@ gulp.task('webserver', function () {
 });
 
 
+/************
+*** WATCH ***
+*************/
 gulp.task('sass:watch', function () {
     gulp.watch('./src/**/*.scss', ['sass']);
 });
 
+
+/************
+*** START ***
+*************/
 gulp.task('start', ['webserver', 'sass:watch']);

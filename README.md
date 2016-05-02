@@ -2,15 +2,13 @@
 
 ## Features
 
-- HTML5 templated index.htm
-- Latest stable releases wired in (using Bower): Twitter Bootstrap 3, jQuery, Modernizr
 - Gulp setup with the following setup:
     - SCSS compiling using libsass (including autoprefixer)
-    - Javascript minification and ready-to-enable concat
-    - Image optimisation using imagemin
-    - Auto-refreshing dev server using gulp-connect
-    - OS-level notification of errors & config so that the watcher continues running
-- Gitignore file setup for NodeJS, Python, and Webstorm
+    - Auto-refreshing dev server using gulp-livereload
+    X Javascript minification and ready-to-enable concat
+    X Image optimisation using imagemin
+X HTML5 templated index.htm
+X Latest stable releases wired in (using Bower): Twitter Bootstrap 3, jQuery, Modernizr
 
 ## Installation
 
