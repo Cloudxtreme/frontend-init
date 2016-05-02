@@ -5,10 +5,10 @@
 - Gulp setup with the following setup:
     - SCSS compiling using libsass (including autoprefixer)
     - Auto-refreshing dev server using gulp-livereload
-    X Javascript minification and ready-to-enable concat
-    X Image optimisation using imagemin
-X HTML5 templated index.htm
-X Latest stable releases wired in (using Bower): Twitter Bootstrap 3, jQuery, Modernizr
+    - X Javascript minification and ready-to-enable concat
+    - X Image optimisation using imagemin
+- X HTML5 templated index.htm
+- X Latest stable releases wired in (using Bower): Twitter Bootstrap 3, jQuery, Modernizr
 
 ## Installation
 
