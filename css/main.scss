@@ -1,0 +1,15 @@
+/*--------------------------------------------------
+I N I T
+website by websolute
+--------------------------------------------------*/
+@import "modules/variables";
+@import "modules/utilities.scss";
+@import "modules/typography";
+
+
+body {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: $main;
+}

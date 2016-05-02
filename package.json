@@ -1,0 +1,26 @@
+{
+  "name": "frontend-init",
+  "version": "1.1.1",
+  "description": "Initializer for all new frontend projects. Gulp (SCSS, JS, Image compression, livereload), Bootstrap, jQuery & Modernizr",
+  "repository": "https://github.com/supahfunk/frontend-init",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp"
+  },
+  "author": "Fabio Ottaviani",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^2.3.1",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-plumber": "^1.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.0.4",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-uglify": "^1.5.3",
+    "gulp-webserver": "^0.9.1"
+  },
+  "dependencies": {
+    "lodash": "^4.11.1"
+  }
+}
