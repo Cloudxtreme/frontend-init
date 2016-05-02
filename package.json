@@ -9,15 +9,16 @@
   },
   "author": "Fabio Ottaviani",
   "license": "MIT",
-    "devDependencies": {
-        "gulp": "^3.9.0",
-        "gulp-autoprefixer": "^2.3.1",
-        "gulp-webserver": "^0.9.1",
-        "gulp-plumber": "^1.0.1",
-        "gulp-rename": "^1.2.2",
-        "gulp-sass": "^2.0.4",
-        "gulp-sourcemaps": "^1.5.2"
-    },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^2.3.1",
+    "gulp-plumber": "^1.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.0.4",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-uglify": "^1.5.3",
+    "gulp-webserver": "^0.9.1"
+  },
   "dependencies": {
     "lodash": "^4.11.1"
   }

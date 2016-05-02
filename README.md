@@ -5,10 +5,10 @@
 - Gulp setup with the following setup:
     - SCSS compiling using libsass (including autoprefixer)
     - Auto-refreshing dev server using gulp-livereload
-    - X Javascript minification and ready-to-enable concat
+    - X Javascript minification
     - X Image optimisation using imagemin
-- X HTML5 templated index.htm
-- X Latest stable releases wired in (using Bower): Twitter Bootstrap 3, jQuery, Modernizr
+- HTML5 templated index.htm
+- Latest stable releases with CDNJS: Twitter Bootstrap 3, jQuery, Modernizr, Slick, Animate.css, Wow.js
 
 ## Installation
 
@@ -19,7 +19,7 @@
 ## Usage
 
 1. Compile files, start watching files, and start dev server `npm start`
-2. Open the dev server in your brower `localhost:8080` also available on the network using `ComputerName.local:8080`
+2. Open the dev server in your brower `localhost:8888` also available on the network using `ComputerName.local:8888`
 
 ## License
 

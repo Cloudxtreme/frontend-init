@@ -1,12 +1,13 @@
 'use strict';
 
 var gulp = require('gulp'),
+    plumber = require('gulp-plumber'),
     sass = require('gulp-sass'),
     rename = require("gulp-rename"),
     sourcemaps = require('gulp-sourcemaps'),
     autoprefixer = require('gulp-autoprefixer'),
-    webserver = require('gulp-webserver'),
-    plumber = require('gulp-plumber');
+    uglify = require('gulp-uglify'),
+    webserver = require('gulp-webserver');
 
 
 /***********
@@ -14,20 +15,19 @@ var gulp = require('gulp'),
 ************/
 gulp.task('sass', function () {
     console.log('COMPILING SASS');
-    return gulp.src('./src/**/*.scss')
+    return gulp.src('./css/**/*.scss')
         .pipe(plumber(function (error) {
             console.log('sass:compile.plumber', error);
         }))
         .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
-        .pipe(sourcemaps.write())
         .pipe(autoprefixer({
             browsers: ['last 2 versions'],
             cascade: false
         }))
+        .pipe(sourcemaps.write())
         .pipe(rename({ dirname: '' }))
-        .pipe(gulp.dest('./src/css'))
-        .pipe(connect.reload());
+        .pipe(gulp.dest('./css'));
 });
 
 
@@ -39,7 +39,7 @@ gulp.task('webserver', function () {
         .pipe(webserver({
             livereload: true,
             directoryListing: false,
-            port: 8081,
+            port: 8888,
             open: true
         }));
 });
@@ -48,8 +48,12 @@ gulp.task('webserver', function () {
 /************
 *** WATCH ***
 *************/
-gulp.task('sass:watch', function () {
-    gulp.watch('./src/**/*.scss', ['sass']);
+gulp.task('sass:watch', function (){ 
+    var watcher = gulp.watch('./css/**/*.scss', ['sass']);
+    watcher.on('change', function (e) {
+        console.log('watcher.on.change type: ' + e.type + ' path: ' + e.path);
+    });
+    return watcher;
 });
 
 

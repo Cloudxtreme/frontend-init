@@ -1,0 +1,21 @@
+﻿// center
+@mixin center {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+// clearfix
+@mixin clearfix {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+
+// transition
+@mixin transition {
+  transition: all .3s cubic-bezier(.84,.08,.27,1);
+}
