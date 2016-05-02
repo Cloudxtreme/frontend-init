@@ -5,8 +5,7 @@
 - Gulp setup with the following setup:
     - SCSS compiling using libsass (including autoprefixer)
     - Auto-refreshing dev server using gulp-livereload
-    - X Javascript minification
-    - X Image optimisation using imagemin
+    - Javascript minification
 - HTML5 templated index.htm
 - Latest stable releases with CDNJS: Twitter Bootstrap 3, jQuery, Modernizr, Slick, Animate.css, Wow.js
 

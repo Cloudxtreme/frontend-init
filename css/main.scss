@@ -9,19 +9,7 @@ website by websolute
 
 body {
     font-family: Roboto, sans-serif;
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1.6;
     color: $main;
-
-    a {
-        color: $secondary;
-        text-decoration: none;
-        @include transition;
-
-        &:hover {
-            text-decoration: none;
-            color: red;
-        }
-    }
-
 }

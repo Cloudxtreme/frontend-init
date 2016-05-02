@@ -6,6 +6,7 @@ var gulp = require('gulp'),
     rename = require("gulp-rename"),
     sourcemaps = require('gulp-sourcemaps'),
     autoprefixer = require('gulp-autoprefixer'),
+    cssmin = require('gulp-cssmin'),
     uglify = require('gulp-uglify'),
     webserver = require('gulp-webserver');
 
@@ -17,7 +18,7 @@ gulp.task('sass', function () {
     console.log('COMPILING SASS');
     return gulp.src('./css/**/*.scss')
         .pipe(plumber(function (error) {
-            console.log('sass:compile.plumber', error);
+            console.log('sass error: compile plumber', error);
         }))
         .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
@@ -27,7 +28,48 @@ gulp.task('sass', function () {
         }))
         .pipe(sourcemaps.write())
         .pipe(rename({ dirname: '' }))
+        .pipe(gulp.dest('./css'))
+        // minify
+        .pipe(cssmin())
+		.pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest('./css'));
+});
+
+
+/*****************
+*** SASS WATCH ***
+******************/
+gulp.task('sass:watch', function () {
+    var watcher = gulp.watch('./css/**/*.scss', ['sass']);
+    watcher.on('change', function (e) {
+        console.log('watcher.on.change type: ' + e.type + ' path: ' + e.path);
+    });
+    return watcher;
+});
+
+
+/*********
+*** JS ***
+**********/
+gulp.task('js', function () {
+    console.log('MINIFYING JS');
+    return gulp.src('./js/main.js')
+        // minify
+        .pipe(uglify())
+		.pipe(rename({ suffix: '.min' }))
+        .pipe(gulp.dest('./js'));
+});
+
+
+/***************
+*** JS WATCH ***
+****************/
+gulp.task('js:watch', function () {
+    var watcher = gulp.watch('./js/main.js', ['js']);
+    watcher.on('change', function (e) {
+        console.log('watcher.on.change type: ' + e.type + ' path: ' + e.path);
+    });
+    return watcher;
 });
 
 
@@ -39,25 +81,13 @@ gulp.task('webserver', function () {
         .pipe(webserver({
             livereload: true,
             directoryListing: false,
-            port: 8888,
+            port: 8080,
             open: true
         }));
 });
 
 
 /************
-*** WATCH ***
-*************/
-gulp.task('sass:watch', function (){ 
-    var watcher = gulp.watch('./css/**/*.scss', ['sass']);
-    watcher.on('change', function (e) {
-        console.log('watcher.on.change type: ' + e.type + ' path: ' + e.path);
-    });
-    return watcher;
-});
-
-
-/************
 *** START ***
 *************/
-gulp.task('start', ['webserver', 'sass:watch']);
+gulp.task('start', ['webserver', 'sass', 'sass:watch', 'js', 'js:watch']);
