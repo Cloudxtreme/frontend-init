@@ -91,3 +91,5 @@ target/
 *.ipr
 *.iws
 .idea/
+/.vs/frontend-init/v14
+/frontend-init.sln
