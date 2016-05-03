@@ -3,7 +3,7 @@
 ## Features
 
 - Gulp setup with the following setup:
-    - SCSS compiling using libsass (including autoprefixer)
+    - SCSS compiling using libsass (including autoprefixer and minifier)
     - Auto-refreshing dev server using gulp-livereload
     - Javascript minification
 - HTML5 templated index.htm
@@ -19,6 +19,11 @@
 
 1. Compile files, start watching files, and start dev server `npm start`
 2. Open the dev server in your brower `localhost:8888` also available on the network using `ComputerName.local:8888`
+
+## Hint
+
+- Be sure that you have installed Ruby & Python (Windows)
+- Try `npm install gulp-sass --save-dev` if something goes wrong with Gulp-Sass module
 
 ## License
 
