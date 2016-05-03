@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/master
 # README
 
 ## Features
@@ -27,11 +23,4 @@
 ## License
 
 supahfunk/frontend-init is released under the MIT license.
-<<<<<<< HEAD
 
-=======
-=======
-# frontend-init
-Frontend Init. Includes complete tooling using Gulp (SCSS, Autoprefixer, JS &amp; livereload server) and some useful CDN.
->>>>>>> 7bf1a0c3daa5b12cf9764b947c89c39dfe51bf6b
->>>>>>> origin/master
