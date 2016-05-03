@@ -23,3 +23,4 @@
 ## License
 
 supahfunk/frontend-init is released under the MIT license.
+

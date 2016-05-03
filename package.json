@@ -5,7 +5,7 @@
   "repository": "https://github.com/supahfunk/frontend-init",
   "main": "index.js",
   "scripts": {
-    "start": "gulp"
+    "start": "gulp start"
   },
   "author": "Fabio Ottaviani",
   "license": "MIT",
